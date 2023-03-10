@@ -10,7 +10,7 @@ export default function Header() {
             <figure>
                 <img src={logo} alt="sportSee logo" />
             </figure>
-            <nav>
+            <nav className="top-nav">
                 <NavLink to="/">Accueil</NavLink>
                 <NavLink to="#">Profil</NavLink>
                 <NavLink to="#">Réglages</NavLink>
