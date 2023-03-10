@@ -11,8 +11,11 @@ body {
 
   margin: 0;
   padding: 0;
+  min-width: 1024px;
+  min-height: 780px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 
 a {
