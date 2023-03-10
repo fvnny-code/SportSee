@@ -5,6 +5,7 @@ import Header from './layouts/Header/Header';
 
 import './App.css';
 import Home from './pages/Home';
+import SideBar from './layouts/SideBar/Sidebar';
 
 
 export default function App() {
@@ -12,6 +13,7 @@ export default function App() {
     <div className="App">
       <BrowserRouter>
         <Header />
+        <SideBar />
         <Routes>
           <Route path='/' element={<Home />}></Route>
         </Routes>
