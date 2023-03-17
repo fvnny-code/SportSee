@@ -34,3 +34,17 @@ li {
   background: black;
   border-radius: .5rem;
 }
+
+
+
+/* Home Page */
+.user-container {
+  max-width: 1240px;
+  margin: 4rem 15rem;
+}
+
+.user-container a {
+  text-transform: uppercase;
+  font-weight: 800;
+  color: red;
+}
