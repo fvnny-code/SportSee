@@ -14,18 +14,17 @@ const urlSuffix = ".json" // mocked routes
 export async function getUserinfos(userId) {
     return await clientHTTP.get(`/user/${userId}${urlSuffix}`)
         .then(response => response.data)
-
 }
 
 export async function getUserActivityInfos(userId) {
-    return await clientHTTP.get(`/user/${userId}/activity`)
+    return await clientHTTP.get(`/user/${userId}/activity${urlSuffix}`)
         .then(response => response.data)
 }
 export async function getUserAverageSessionsInfos(userId) {
-    return await clientHTTP.get(`/user/${userId}/average-sessions`)
+    return await clientHTTP.get(`/user/${userId}/average-sessions${urlSuffix}`)
         .then(response => response.data)
 }
 export async function getUserPerformanceInfos(userId) {
-    return await clientHTTP.get(`/user/${userId}/performance`)
+    return await clientHTTP.get(`/user/${userId}/performance${urlSuffix}`)
         .then(response => response.data)
 }
