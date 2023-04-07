@@ -1,4 +1,4 @@
-import React from 'react';
+//import React from 'react';
 import axios from 'axios';
 
 // axios instance
@@ -15,16 +15,17 @@ export async function getUserinfos(userId) {
     return await clientHTTP.get(`/user/${userId}${urlSuffix}`)
         .then(response => response.data)
 
-
-
 }
 
-export async function getActivityInfos() {
-
+export async function getUserActivityInfos(userId) {
+    return await clientHTTP.get(`/user/${userId}/activity`)
+        .then(response => response.data)
 }
-export async function getSessionsInfos() {
-
+export async function getUserAverageSessionsInfos(userId) {
+    return await clientHTTP.get(`/user/${userId}/average-sessions`)
+        .then(response => response.data)
 }
-export async function getPerformanceInfos() {
-
+export async function getUserPerformanceInfos(userId) {
+    return await clientHTTP.get(`/user/${userId}/performance`)
+        .then(response => response.data)
 }
