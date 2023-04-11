@@ -18,7 +18,6 @@ export default function User() {
                     <section className='charts'>
                         <article>
                             <div className='activityChart'>
-                                activité quotidienne
                                 <ActivityChart />
                             </div>
                             <div className='chartsContainer'>

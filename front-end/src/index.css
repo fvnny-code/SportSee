@@ -59,7 +59,18 @@ li {
 
 .charts article {
   margin: 0 3rem;
+  width: 100%;
 }
+
+.activityChart {
+  background-color: #FBFBFB;
+  padding: 30px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin: 0 3rem;
+}
+
+
 
 .chartsContainer {
   display: flex;
@@ -67,4 +78,25 @@ li {
   align-items: center;
   gap: 2rem;
   padding: 1rem;
+}
+
+/* Chart */
+.BarchartContainer {
+
+  width: 100%;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+
+.BarchartTitle {
+  text-align: left;
+  font-size: 15px;
+  font-weight: bold;
+  position: relative;
+  top: 30px;
+
 }
