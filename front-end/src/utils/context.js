@@ -15,7 +15,7 @@ export const UserProvider = ({ children }) => {
 
     const userId = 12 // or 18
     useEffect(async () => {
-        const [userInfos, activity] = await Promise.all([
+        const [userInfos, activity, averageSession, performance] = await Promise.all([
             getUserinfos(userId),
             getUserActivityInfos(userId),
             getUserAverageSessionsInfos(userId),
@@ -28,11 +28,12 @@ export const UserProvider = ({ children }) => {
         })
 
         setActivity((state) => {
-            state.sessions = activity
+            state.sessions = activity.sessions
             return state
         })
         setAverageSessions((state) => {
-            state.sessions = averageSessions
+
+            state.sessions = averageSession.sessions
             return state
         })
         setPerformance((state) => {
@@ -46,7 +47,7 @@ export const UserProvider = ({ children }) => {
 
 
     return (
-        <UserContext.Provider value={{ ...infos, hasLoaded }}>
+        <UserContext.Provider value={{ ...infos, hasLoaded, activity, averageSessions, performance }}>
             {children}
         </UserContext.Provider>
     )
