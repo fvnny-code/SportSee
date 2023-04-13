@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { UserContext, } from '../utils/context';
 import ActivityChart from '../components/Charts/ActivityChart';
+import { AverageSessionsChart } from '../components/Charts/AverageSessionsChart';
 
 
 
@@ -21,7 +22,8 @@ export default function User() {
                                 <ActivityChart />
                             </div>
                             <div className='chartsContainer'>
-                                <div className='sessionDurationChart'>Durée moyenne des sessions</div>
+                                {/* <div className='sessionDurationChart'>Durée moyenne des sessions</div> */}
+                                <AverageSessionsChart/>
                                 <div className='performanceChart'>Peformances</div>
                                 <div className='scoreChart'>Score</div>
                             </div>
