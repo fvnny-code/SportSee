@@ -5,14 +5,16 @@ import { useContext } from "react";
 export function AverageSessionsChart() {
 
     const context = useContext(UserContext);
-    console.log(context.averageSessions.sessions)
+    // console.log(context.averageSessions.sessions)
     if (!context.hasLoaded) {
         return <></>;
     }
 
-    //Format Xaxis ticks
-    //@param {Number} day - day of the week
-    //@returns corresponding letter of the day
+    /**
+     * Format XAxis ticks
+     * @param {Number} day - day of the week
+     * @returns corresponding letter of the day
+     */
 
     const xAxisFormatter = (day) => {
         switch (day) {
@@ -27,10 +29,12 @@ export function AverageSessionsChart() {
         }
     }
 
-    // Format Tooltip
-    // @param {array} payload - source data
-    // @param {boolean} active - is Tootip active
-    // @returns the value when a dot on the line is pointed
+    /**
+     * Format Tooltip
+     * @param {array} payload - source data
+     * @param {boolean} active - is Tootip active
+     * @returns the value when a dot on the line is pointed
+     */
 
     function CustomToolTipSessionDuration({ active, payload }) {
         if (active) {
@@ -42,6 +46,11 @@ export function AverageSessionsChart() {
         }
         return null
     }
+    /**
+     * Animate background format when moving the cursor on the chart line
+     * @param {event} e - move of the mouse
+     * @returns darker background from the pointed dot
+     */
 
     function customMouseMove(e) {
         let sessionWrap = document.querySelector('.LinechartContainer ');
@@ -58,6 +67,12 @@ export function AverageSessionsChart() {
             sessionWrap.style.background = 'transparent'
         }
     }
+
+    /**
+     * Animate background format when moving the cursor out of a line dot
+     * @param {event} e - move of the mouse
+     * @returns initial background
+     */
 
     function customOnMouseOut() {
         let sessionWrap = document.querySelector('.LinechartContainer');
