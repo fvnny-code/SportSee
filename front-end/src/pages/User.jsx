@@ -22,8 +22,10 @@ export default function User() {
                                 <ActivityChart />
                             </div>
                             <div className='chartsContainer'>
-                                <div className='sessionDurationChart'>Durée moyenne des sessions</div>
-                                <AverageSessionsChart />
+                                <div className='sessionDurationChart'>
+                                    <AverageSessionsChart />
+                                </div>
+
                                 <div className='performanceChart'>Peformances</div>
                                 <div className='scoreChart'>Score</div>
                             </div>
