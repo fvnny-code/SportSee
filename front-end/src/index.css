@@ -149,7 +149,7 @@ li {
   background-color: #E60000;
   border-radius: 5px;
   height: 263px;
-  width: 25%;
+  width: 32%;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -168,4 +168,12 @@ li {
   justify-content: center;
   align-items: center;
 
+}
+
+/* Performance */
+.performanceChart {
+  background-color: #282D30;
+  border-radius: 5px;
+  width: 32%;
+  height: 263px;
 }
