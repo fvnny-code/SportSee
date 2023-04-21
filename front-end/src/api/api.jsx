@@ -3,12 +3,13 @@ import axios from 'axios';
 
 // axios instance
 const clientHTTP = axios.create({
-    baseURL: "http://localhost:3000/", // mockData
+    baseURL: process.env.REACT_APP_API_URL, // mockData
     headers: {
         "Content-Type": "application/json"
     }
 })
-const urlSuffix = ".json" // mocked routes
+
+const urlSuffix = process.env.REACT_APP_USE_MOCK === "true" ? ".json" : ""// mocked routes
 
 
 export async function getUserinfos(userId) {
