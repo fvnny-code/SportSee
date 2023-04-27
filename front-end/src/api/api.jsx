@@ -29,3 +29,7 @@ export async function getUserPerformanceInfos(userId) {
     return await clientHTTP.get(`/user/${userId}/performance${urlSuffix}`)
         .then(response => response.data)
 }
+export async function getUserScoreInfos(userId) {
+    return await clientHTTP.get(`/user/${userId}${urlSuffix}`)
+        .then(response => response.data)
+}

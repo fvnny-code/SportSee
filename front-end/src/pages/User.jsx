@@ -3,6 +3,7 @@ import { UserContext, } from '../utils/context';
 import ActivityChart from '../components/Charts/ActivityChart';
 import { AverageSessionsChart } from '../components/Charts/AverageSessionsChart';
 import { PerformanceChart } from '../components/Charts/PerformanceChart';
+import { ScoreChart } from '../components/Charts/ScoreChart';
 
 
 
@@ -29,7 +30,9 @@ export default function User() {
                                 <div className='performanceChart'>
                                     <PerformanceChart />
                                 </div>
-                                <div className='scoreChart'>Score</div>
+                                <div className='scoreChart'>
+                                    <ScoreChart/>
+                                </div>
                             </div>
                         </article>
                         <aside>
