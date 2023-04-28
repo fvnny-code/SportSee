@@ -12,11 +12,11 @@ export function ScoreChart() {
   }
 
   const score = [
-    { value: context.score.todayScore || context.score },
-    { value: 1 - context.score.todayScore || context.score },
+    { value: context.score.todayScore || context.score.score  },
+    { value: 1 - context.score.todayScore || context.score.score  },
   ];
 
-
+  console.log(score);
   return (
     <div className="ScoreChartContainer">
       <h2 className="ScoreChartTitle">Score</h2>
@@ -24,25 +24,23 @@ export function ScoreChart() {
         <PieChart>
           <Pie
             data={score}
-            dataKey="value"
+            dataKey="value"  
             cx="50%"
-            cy="50%"
+            cy="40%"
             innerRadius={70}
             outerRadius={85}
             startAngle={90}
           >
-            {score.map((entry, index) =>
-              index === 0 ? (
-                <Cell key={`cell-${index}`} cornerRadius={10} fill="#ff0000" />
-              ) : (
-                <Cell key={`cell-${entry}`} fill="#E60000" />
-              )
-            )}
+
+             <Cell cornerRadius={10} fill="#E60000" /> 
+             <Cell fill="#fbfbfb" />
+
           </Pie>
         </PieChart>
+        
       </ResponsiveContainer>
       <div className="score">
-        <p className="scorePercent">{score[0].value * 100}%</p>
+        <p className="scorePercent">{score[0].value * 100} %</p>
         <p className="scoreText">
           de votre
           <br />

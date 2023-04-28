@@ -4,11 +4,13 @@ import ActivityChart from '../components/Charts/ActivityChart';
 import { AverageSessionsChart } from '../components/Charts/AverageSessionsChart';
 import { PerformanceChart } from '../components/Charts/PerformanceChart';
 import { ScoreChart } from '../components/Charts/ScoreChart';
+import { NutritionCard } from '../components/NutritionCard';
 
 
 
 export default function User() {
     const userContext = useContext(UserContext)
+
 
     return (
         <div className='main'>
@@ -36,13 +38,10 @@ export default function User() {
                             </div>
                         </article>
                         <aside>
-                            Nutrition cards :
-                            <ul>calories</ul>
-                            <ul>Protéines</ul>
-                            <ul>Glucides</ul>
-                            <ul>Lipides</ul>
+                           <NutritionCard/>
                         </aside>
                     </section>
+
                 </>
             )
             }

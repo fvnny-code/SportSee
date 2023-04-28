@@ -179,18 +179,21 @@ li {
   top: 20px;
   left: 20px;
 }
-/* .ScoreChartContainer {
-  display: flex;
-  flex-direction: column;
-
-} */
+.ScoreChartContainer {
+  /* display: flex;
+  flex-direction: column; */
+  border-radius: 5px;
+  height: 263px;
+  /* width: 32%; */
+  position: relative;
+}
 
 .scoreChart {
   background-color: #fbfbfb;
-  border-radius: 5px;
+
   height: 263px;
   width: 32%;
-  position: relative;
+  /* position: relative; */
 }
 .score {
   position: absolute;

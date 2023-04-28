@@ -14,7 +14,7 @@ export const UserProvider = ({ children }) => {
 
     const [hasLoaded, setHasLoaded] = useState(false)
 
-    const userId = 12 // or 18
+    const userId = 18 // or 18
     useEffect(async () => {
         const [userInfos, activity, averageSession, performance, score] = await Promise.all([
             getUserinfos(userId),
@@ -45,6 +45,7 @@ export const UserProvider = ({ children }) => {
         })
         setScore((state)=> {
             state.todayScore = score.todayScore
+            state.score = score.score
             return state
         })
 
