@@ -7,7 +7,9 @@ header {
     z-index: 1;
     display: flex;
 }
-
+figure {
+    z-index:2;
+}
 img {
     width: 178px;
     margin-right: 150px;

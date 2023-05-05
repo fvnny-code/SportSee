@@ -16,7 +16,6 @@ export function ScoreChart() {
     { value: 1 - context.score.todayScore || context.score.score  },
   ];
 
-  console.log(score);
   return (
     <div className="ScoreChartContainer">
       <h2 className="ScoreChartTitle">Score</h2>
