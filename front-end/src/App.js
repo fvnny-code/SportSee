@@ -6,7 +6,7 @@ import { UserProvider } from './utils/context';
 
 
 import './App.css';
-import Home from './pages/Home';
+// import Home from './pages/Home';
 import SideBar from './layouts/SideBar/Sidebar';
 
 
@@ -18,8 +18,8 @@ export default function App() {
           <Header />
           <SideBar />
           <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/user/:id' element={<User />} />
+            <Route path='/' element={<User />} />
+           
 
           </Routes>
         </BrowserRouter>

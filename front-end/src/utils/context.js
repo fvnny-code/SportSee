@@ -1,21 +1,20 @@
 
 import React, { useState, createContext, useEffect } from 'react';
-import { getUserAverageSessionsInfos, getUserPerformanceInfos, getUserinfos, getUserActivityInfos, getUserScoreInfos, getUserKeyData } from '../api/api';
+import { getUserAverageSessionsInfos, getUserPerformanceInfos, getUserinfos, getUserActivityInfos, getUserScoreInfos } from '../api/api';
 
 // User Context //
 
 export const UserContext = createContext();
 export const UserProvider = ({ children }) => {
-    const [infos, setInfos] = useState({ userInfos: null })
+    const [infos, setInfos] = useState({ userInfos: null})
     const [activity, setActivity] = useState({ sessions: [] })
     const [averageSessions, setAverageSessions] = useState({ sessions: [] })
     const [performance, setPerformance] = useState({ kind: null, data: null })
     const [score, setScore] = useState({todayScore: null})
-    const [keyData, setKeyData] = useState({keyData: null})
 
     const [hasLoaded, setHasLoaded] = useState(false)
 
-    const userId = 12 // or 18
+    const userId = 18 // or 18
     useEffect(async () => {
         const [userInfos, activity, averageSession, performance, score, keyData] = await Promise.all([
             getUserinfos(userId),
@@ -23,11 +22,11 @@ export const UserProvider = ({ children }) => {
             getUserAverageSessionsInfos(userId),
             getUserPerformanceInfos(userId),
             getUserScoreInfos(userId),
-            getUserKeyData(userId),
 
         ])
         setInfos((state) => {
             state.userInfos = userInfos
+
             return state
         })
 
@@ -48,10 +47,6 @@ export const UserProvider = ({ children }) => {
         setScore((state)=> {
             state.todayScore = score.todayScore
             state.score = score.score
-            return state
-        })
-        setKeyData((state)=>{
-            state.keyData = keyData
             return state
         })
 
