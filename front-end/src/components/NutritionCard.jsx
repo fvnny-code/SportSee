@@ -12,7 +12,6 @@ export function NutritionCard() {
   
 
   return (
-    <>
     
     <div className="nutritionCard">
       <img className="nutritionCardIcon" src="" alt="nutrition card icon" />
@@ -21,13 +20,7 @@ export function NutritionCard() {
         <div className="nutritionCardKeytype">Calories</div>
       </div>
     </div>
-       <div className="nutritionCard">
-       <img className="nutritionCardIcon" src="" alt="nutrition card icon" />
-       <div className="nutritionCardText">
-         <div className="nutritionCardKeyData">calorieCount</div>
-         <div className="nutritionCardKeytype">Calories</div>
-       </div>
-     </div>
-     </>
+       
+    
   );
 }

@@ -19,6 +19,7 @@ export default function User() {
               {userContext.userInfos.userInfos.firstName}
             </span>
           </h1>
+          <p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
           <section className="charts">
             <article>
               <div className="activityChart">
