@@ -51,30 +51,34 @@ li {
 /* User Page */
 .charts {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 4rem;
+  justify-content: center;
+  /* align-items: center; */
+  padding: 0 2rem;
+  z-index: -1;
 }
 
-.charts article {
-  margin: 0 3rem;
-  width: 100%;
+/* Charts */
+
+.charts  {
+  margin: 0 1rem 2rem 4rem;
+}
+
+article {
+  width: 80%;
 }
 
 .chartsContainer {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   gap: 2rem;
-  padding: 3rem;
+  padding: 0 3rem;
+  margin-top: 3rem;
 }
-
-/* Chart */
 
 /* Activity */
 .activityChart {
   background-color: #fbfbfb;
-  padding: 30px;
+  padding: 65px 30px;
   border-radius: 5px;
   box-sizing: border-box;
   margin: 0 3rem;
@@ -180,11 +184,10 @@ li {
   left: 20px;
 }
 .ScoreChartContainer {
-  /* display: flex;
-  flex-direction: column; */
+ 
   border-radius: 5px;
   height: 263px;
-  /* width: 32%; */
+
   position: relative;
 }
 
@@ -193,7 +196,6 @@ li {
 
   height: 263px;
   width: 32%;
-  /* position: relative; */
 }
 .score {
   position: absolute;
@@ -214,4 +216,41 @@ li {
   color: #74798c;
   text-align: center;
   margin: .8rem;
+}
+
+
+/* Nutrition cards */
+
+.NutritionCardWrapper {
+  display: flex;
+  flex-direction: column;
+
+
+}
+
+.nutritionCard{
+  background-color: #FBFBFB;
+  padding: 8%;
+  display: flex;
+  
+  width: 100%;
+}
+/* .nutritionCardIcon{
+  width: 5px;
+  height: 50px;
+} */
+.nutritionCardText{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 5px;
+}
+.nutritionCardKeyData{
+  font-weight: 700;
+    font-size: 18px;
+}
+.nutritionCardKeytype{
+  font-weight: 500;
+  font-size: 14px;
 }

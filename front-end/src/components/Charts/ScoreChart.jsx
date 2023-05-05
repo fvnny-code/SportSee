@@ -5,7 +5,7 @@ import { useContext } from "react";
 
 export function ScoreChart() {
   const context = useContext(UserContext);
-  console.log(context.score);
+  // console.log(context.score);
 
   if (!context.hasLoaded) {
     return <></>;

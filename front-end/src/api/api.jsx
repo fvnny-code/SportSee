@@ -33,3 +33,8 @@ export async function getUserScoreInfos(userId) {
     return await clientHTTP.get(`/user/${userId}${urlSuffix}`)
         .then(response => response.data)
 }
+export async function getUserKeyData(userId) {
+    return await clientHTTP.get(`/user/${userId}${urlSuffix}`)
+        .then(response => response.data)
+}
+

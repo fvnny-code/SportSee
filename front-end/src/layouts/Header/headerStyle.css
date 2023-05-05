@@ -16,7 +16,7 @@ img {
 .top-nav {
     width: 80%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     margin-top: 3.5rem;
 }
