@@ -11,6 +11,7 @@ import {
 import { UserContext } from "../../utils/context";
 import { useContext } from "react";
 
+
 export default function ActivityChart() {
   const context = useContext(UserContext);
   if (!context.hasLoaded) {
@@ -18,20 +19,22 @@ export default function ActivityChart() {
   }
 
 
-  // Get the day in the date.
-  // @params{string} value - full date
-  // @params {number {1-31}} number of days
-
+/**
+ * Retrieve the day value of the formated date.
+ * @param {string} value a formated date( ex : "2020-07-02")
+ * @returns {number} returns the day value number
+ */
   const xAxisTickFormat = (value) => {
     const valueDay = value.split("-");
     return Number(valueDay[2]);
   };
 
-  // Format Tooltip
-  // @param {array} payload - source data
-  // @param {boolean} active - is Tootip active
-  // @returns data.value on hover
 
+  /**
+   * 
+   * @param {{active : boolean, payload : {value : number}[]}}
+   * @returns 
+   */
   function CustomTooltip({ active, payload }) {
   
     if (active) {
