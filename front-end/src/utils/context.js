@@ -5,6 +5,11 @@ import { getUserAverageSessionsInfos, getUserPerformanceInfos, getUserinfos, get
 // User Context //
 
 export const UserContext = createContext();
+/**
+ * 
+ * @param {*} param0 
+ * @returns 
+ */
 export const UserProvider = ({ children }) => {
     const [infos, setInfos] = useState({ userInfos: null})
     const [activity, setActivity] = useState({ sessions: [] })
