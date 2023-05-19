@@ -5,12 +5,14 @@ import { useContext } from "react";
 
 export function ScoreChart() {
   const context = useContext(UserContext);
-  // console.log(context.score);
-
   if (!context.hasLoaded) {
     return <></>;
   }
 
+  /**
+   * Retrieve the formated value of the score
+   * @var {{value : number}[]} 
+   */
   const score = [
     { value: context.score.todayScore || context.score.score  },
     { value: 1 - context.score.todayScore || context.score.score  },

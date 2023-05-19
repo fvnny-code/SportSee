@@ -1,13 +1,17 @@
 import { CartesianGrid, LineChart, XAxis, YAxis, Tooltip, Line, ResponsiveContainer } from "recharts";
 import { UserContext } from "../../utils/context";
-import { useContext } from "react";
+import { useContext, useRef } from "react";
 
 export function AverageSessionsChart() {
+    
+    const LinechartContainer = useRef(null);
+
     const context = useContext(UserContext);
     if (!context.hasLoaded) {
         return <></>;
     }
 
+   
     /**
      * Retrieve the day value of the formated date.
      * @param {Number} day - day of the week
@@ -50,18 +54,18 @@ export function AverageSessionsChart() {
      */
 
     function customMouseMove(e) {
-        let sessionWrap = document.querySelector('.LinechartContainer ');
-
         if (e.isTooltipActive) {
-            let windowWidth = sessionWrap.offsetWidth;
+            let windowWidth =  LinechartContainer.current.offsetWidth;
             let mouseXpercent = Math.floor(
                 (e.activeCoordinate.x / windowWidth) * 100
             );
 
-            sessionWrap.style.background = `linear-gradient(90deg, rgba(255,0,0, 1) ${mouseXpercent}%, rgba(0,0,0,0.1) ${mouseXpercent}%, rgba(0,0,0,0.1) 100%)`;
+           LinechartContainer.current.style.background = `linear-gradient(90deg, rgba(255,0,0, 1) ${mouseXpercent}%, rgba(0,0,0,0.1) ${mouseXpercent}%, rgba(0,0,0,0.1) 100%)`;
+           console.log(LinechartContainer.current.style.background);
+
         }
         else {
-            sessionWrap.style.background = 'transparent'
+            LinechartContainer.current.style.background = 'transparent'
         }
     }
 
@@ -71,14 +75,13 @@ export function AverageSessionsChart() {
      * @returns initial background
      */
 
-    function customOnMouseOut() {
-        let sessionWrap = document.querySelector('.LinechartContainer');
-        sessionWrap.style.background = 'transparent'
+    function customOnMouseOut() {       
+        LinechartContainer.current.style.background = "transparent"
     }
 
 
     return (
-        <div className="LinechartContainer">
+        <div className="LinechartContainer" ref={LinechartContainer}>
             <h2 className="LineChartTitle white">Durée moyenne des sessions</h2>
             <ResponsiveContainer width="100%" height="100%">
                 <LineChart

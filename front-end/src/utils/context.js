@@ -5,11 +5,7 @@ import { getUserAverageSessionsInfos, getUserPerformanceInfos, getUserinfos, get
 // User Context //
 
 export const UserContext = createContext();
-/**
- * 
- * @param {*} param0 
- * @returns 
- */
+
 export const UserProvider = ({ children }) => {
     const [infos, setInfos] = useState({ userInfos: null})
     const [activity, setActivity] = useState({ sessions: [] })
@@ -19,9 +15,10 @@ export const UserProvider = ({ children }) => {
 
     const [hasLoaded, setHasLoaded] = useState(false)
 
-    const userId = 18 // or 18
-    useEffect(async () => {
-        const [userInfos, activity, averageSession, performance, score, keyData] = await Promise.all([
+    const userId = 18 // or 12
+
+    const loadUser = async()=> {
+        const [userInfos, activity, averageSession, performance, score ] = await Promise.all([
             getUserinfos(userId),
             getUserActivityInfos(userId),
             getUserAverageSessionsInfos(userId),
@@ -56,6 +53,10 @@ export const UserProvider = ({ children }) => {
         })
 
         setHasLoaded(true)
+
+    }
+    useEffect(() => {
+        loadUser()
     }, [])
 
 

@@ -1,10 +1,10 @@
 //import React from 'react';
 import axios from 'axios';
 
-// axios instance
 
 /**
- * @returns client HTTP request to retrieve data
+ * 
+ * @var {axios} client HTTP request to retrieve data
  */
 const clientHTTP = axios.create({
     baseURL: process.env.REACT_APP_API_URL, // mockData
@@ -13,7 +13,7 @@ const clientHTTP = axios.create({
     }
 })
 /**
- * @returns the json formated url suffix for macked data api calls
+ * @var {string} api url
  */
 const urlSuffix = process.env.REACT_APP_USE_MOCK === "true" ? ".json" : ""// mocked routes
 

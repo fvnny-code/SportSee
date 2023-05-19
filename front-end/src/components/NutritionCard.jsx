@@ -45,12 +45,12 @@ export function NutritionCard() {
   if (!context.hasLoaded) {
     return <></>;
   }
-  // console.log(context.userInfos.keyData);
+
 
   return (
     <>
-      {nutritions.map((nutrition) => (
-        <div className="nutritionCard">
+      {nutritions.map((nutrition, i) => (
+        <div className="nutritionCard" key={i}>
           <img
             className="nutritionCardIcon"
             src={nutrition.icon}

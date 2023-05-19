@@ -6,13 +6,16 @@ import { useContext } from "react";
 export function PerformanceChart() {
 
     const context = useContext(UserContext);
-    // console.log(context.performance)
     if (!context.hasLoaded) {
         return <></>;
     }
 
 
-
+/**
+ * 
+ * @param {string} kind 
+ * @returns {string} returns the corresponding value of each kind.
+ */
     const xAxisFormatter = (kind) => {
        
         switch (kind){
