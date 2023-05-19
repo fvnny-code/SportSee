@@ -26,7 +26,6 @@ export const UserProvider = ({ children }) => {
             getUserScoreInfos(userId),
 
         ])
-        console.log(userInfos);
         setInfos((state) => {
             state.userInfos = userInfos
 
