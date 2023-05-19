@@ -3,17 +3,15 @@ import { UserContext } from "../../utils/context";
 import { useContext } from "react";
 
 export function AverageSessionsChart() {
-
     const context = useContext(UserContext);
-    // console.log(context.averageSessions.sessions)
     if (!context.hasLoaded) {
         return <></>;
     }
 
     /**
-     * Format XAxis ticks
+     * Retrieve the day value of the formated date.
      * @param {Number} day - day of the week
-     * @returns corresponding letter of the day
+     * @returns {string} corresponding letter of the day
      */
 
     const xAxisFormatter = (day) => {
@@ -29,12 +27,11 @@ export function AverageSessionsChart() {
         }
     }
 
-    /**
-     * Format Tooltip
-     * @param {array} payload - source data
-     * @param {boolean} active - is Tootip active
-     * @returns the value when a dot on the line is pointed
-     */
+  /**
+   * 
+   * @param {{active : boolean, payload : {value : number}[]}} 
+   * @returns the session duration value.
+   */
 
     function CustomToolTipSessionDuration({ active, payload }) {
         if (active) {

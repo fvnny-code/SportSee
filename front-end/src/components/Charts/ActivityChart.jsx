@@ -33,7 +33,7 @@ export default function ActivityChart() {
   /**
    * 
    * @param {{active : boolean, payload : {value : number}[]}}
-   * @returns 
+   * @returns the activity chart values (kg, calories)
    */
   function CustomTooltip({ active, payload }) {
   
