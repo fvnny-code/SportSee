@@ -11,39 +11,41 @@ export function NutritionCard() {
   const { calorieCount, carbohydrateCount, proteinCount, lipidCount } =
     context.userInfos.keyData;
 
-    
   const nutritions = [
     {
       icon: caloriesIcon,
       // Intl = object for internationalization format (Nbers, dates, currencies etc.)
-      value: new Intl.NumberFormat("en-EN", {style: "decimal",maximumFractionDigits: 0}).format(calorieCount),
+      value: new Intl.NumberFormat("en-EN", {
+        style: "decimal",
+        maximumFractionDigits: 0,
+      }).format(calorieCount),
       unit: "kCal",
-      unitName: "Calories"
+      unitName: "Calories",
     },
     {
-      icon:proteinIcon,
+      icon: proteinIcon,
       value: proteinCount,
       unit: "g",
-      unitName: "Protéines"
+      unitName: "Protéines",
     },
     {
-      icon:carbohydrateIcon,
+      icon: carbohydrateIcon,
       value: carbohydrateCount,
       unit: "g",
-      unitName: "Gluciides"
+      unitName: "Glucides",
     },
     {
-      icon:fatIcon,
+      icon: fatIcon,
       value: lipidCount,
       unit: "g",
-      unitName: "Lipides"
-    }
+      unitName: "Lipides",
+    },
   ];
 
   if (!context.hasLoaded) {
     return <></>;
   }
-  console.log(context.userInfos.keyData);
+  // console.log(context.userInfos.keyData);
 
   return (
     <>

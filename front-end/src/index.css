@@ -225,20 +225,22 @@ article {
 .NutritionCardWrapper {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  justify-content: space-between;
 }
 
 .nutritionCard {
   background-color: #fbfbfb;
   border-radius: 5px;
-  padding: 8%;
+  padding: 2rem;
   display: flex;
   width: 100%;
 }
-/* .nutritionCardIcon{
-  width: 5px;
+.nutritionCardIcon{
+  width: 50px;
   height: 50px;
-} */
+  margin-right: 1rem;
+}
+
 .nutritionCardText {
   display: flex;
   flex-direction: column;
