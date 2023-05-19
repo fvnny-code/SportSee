@@ -73,7 +73,7 @@ article {
 .chartsContainer {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1.5rem;
   padding: 0 3rem;
   margin-top: 2rem;
 }
