@@ -24,7 +24,7 @@ const urlSuffix = process.env.REACT_APP_USE_MOCK === "true" ? ".json" : ""// moc
  */
 export async function getUserinfos(userId) {
     return await clientHTTP.get(`/user/${userId}${urlSuffix}`)
-        .then(response => response.data)
+        .then(response => response.data.data)
 }
 
 /**
@@ -34,7 +34,7 @@ export async function getUserinfos(userId) {
  */
 export async function getUserActivityInfos(userId) {
     return await clientHTTP.get(`/user/${userId}/activity${urlSuffix}`)
-        .then(response => response.data)
+        .then(response => response.data.data)
 }
 /**
  * 
@@ -43,7 +43,7 @@ export async function getUserActivityInfos(userId) {
  */
 export async function getUserAverageSessionsInfos(userId) {
     return await clientHTTP.get(`/user/${userId}/average-sessions${urlSuffix}`)
-        .then(response => response.data)
+        .then(response => response.data.data)
 }
 /**
  * 
@@ -52,7 +52,7 @@ export async function getUserAverageSessionsInfos(userId) {
  */
 export async function getUserPerformanceInfos(userId) {
     return await clientHTTP.get(`/user/${userId}/performance${urlSuffix}`)
-        .then(response => response.data)
+        .then(response => response.data.data)
 }
 /**
  * 
@@ -61,7 +61,7 @@ export async function getUserPerformanceInfos(userId) {
  */
 export async function getUserScoreInfos(userId) {
     return await clientHTTP.get(`/user/${userId}${urlSuffix}`)
-        .then(response => response.data)
+        .then(response => response.data.data)
 }
 
 

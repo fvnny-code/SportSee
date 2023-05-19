@@ -61,7 +61,6 @@ export function AverageSessionsChart() {
             );
 
            LinechartContainer.current.style.background = `linear-gradient(90deg, rgba(255,0,0, 1) ${mouseXpercent}%, rgba(0,0,0,0.1) ${mouseXpercent}%, rgba(0,0,0,0.1) 100%)`;
-           console.log(LinechartContainer.current.style.background);
 
         }
         else {
