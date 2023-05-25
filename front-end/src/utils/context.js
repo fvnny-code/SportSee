@@ -15,7 +15,7 @@ export const UserProvider = ({ children }) => {
 
     const [hasLoaded, setHasLoaded] = useState(false)
 
-    const userId = 12 // or 12
+    const userId = 18 // or 12
 
     const loadUser = async()=> {
         const [userInfos, activity, averageSession, performance, score ] = await Promise.all([
