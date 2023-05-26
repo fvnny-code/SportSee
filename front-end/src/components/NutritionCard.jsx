@@ -1,8 +1,8 @@
 import { useContext } from "react";
 import { UserContext } from "../utils/context";
+
 import caloriesIcon from "../assets/dashboard-icons/calories-icon.png";
 import proteinIcon from "../assets/dashboard-icons/protein-icon.png";
-
 import carbohydrateIcon from "../assets/dashboard-icons/carbs-icon.png";
 import fatIcon from "../assets/dashboard-icons/fat-icon.png";
 
