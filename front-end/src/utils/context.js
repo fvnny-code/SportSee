@@ -36,6 +36,7 @@ export const UserProvider = ({ children }) => {
             state.sessions = activity.sessions
             return state
         })
+        
         setAverageSessions((state) => {
             
             state.sessions = averageSession.sessions
