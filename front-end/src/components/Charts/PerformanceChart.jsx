@@ -17,7 +17,7 @@ export function PerformanceChart() {
 
   /**
    *
-   * @param {string} kind
+   * @param {number} kind
    * @returns {string} returns the corresponding value of each kind.
    */
   const xAxisFormatter = (kind) => {
