@@ -14,7 +14,7 @@ export default function User() {
       {userContext.hasLoaded && (
         <>
           <h1>
-            Bonjour,
+            Bonjour, 
             <span className="user-name">
               {userContext.userInfos.userInfos.firstName}
             </span>
